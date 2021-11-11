@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adding Up Numbers</title>
+    <style>
+        button {
+            width:200px;
+            height:300px;
+            background-color: pink;
+            color: #ff00ff;
+            font-weight:bold;
+            font-size: 23px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <label for="num1">Enter 2000:</label><input type="number" name="num1" id="num1">
+    <br>+<br>
+    <label for="num2">Enter 0l:</label><input type="number" name="num2" id="num2">
+    <br>
+    <label for="res">Adding two numbers: </label><span id="res"></span>
+    <br>
+    <button id="btn1">click me</button>
+    <button id="btn2">Clear</button>
+    <script>
+       document.getElementById("btn1").onclick = function() {
+            let res = 0
+            try{
+                  let number1 = parseInt(document.getElementById("num1").value);
+                  let number2 = parseInt(document.getElementById("num2").value);
+                  res = number1 + number2;
+            } catch (e){
+                res = "nAN";
+            }
+            document.getElementById("res").innerHTML = res;
+        };
+          document.getElementById("btn2").onclick = function() {
+            document.getElementById("num1").value = "";
+            document.getElementById("num2").value = "";
+            document.getElementById("num1").focus();0.
+        };
+    </script>
+</body>
+</html>
