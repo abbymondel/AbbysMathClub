@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+                 $("#header").load("nav.html");
+        });
+    </script>
+    <link rel="stylesheet" href="mylooks.css" />
+</head>
+<body>
+<div id="header"></div>
+<label for="dif">Select Difficulty</label>
+<select id="dif" name="difSel">
+    <option value="VERYEASY">Very Easy</option>
+    <option value="EASY">Easy</option>
+    <option value="MEDIUM">Medium</option>
+    <option value="HARD">Hard</option>
+    <option value="NIGHTMARE">Nightmare</option>
+</select>
+<div><button id="ask">Ask Me a Question</button></div>
+<div id="isCorrect"></div>
+<span id="val1"></span> <span id="oper"></span> <span id="val2"></span> = <input type="number" id="ans">
+<div><button id="checkAns">Check Answer</button></div>
+<script src="game.js"></script>
+</body>
+
+
+</html>
