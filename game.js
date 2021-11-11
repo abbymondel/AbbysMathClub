@@ -10,6 +10,8 @@ $("#ask").on("click",function(){
     $("#val2").html(Math.floor((Math.random() * myDif) + 1));
     let opers = getOperator(myDif);
     $("#oper").html(opers[Math.floor(Math.random()*opers.length)]);
+    $("#ans").val('');
+    $("#ans").focus();
 });
 
 $("#checkAns").on("click",function(){
@@ -40,6 +42,7 @@ $("#checkAns").on("click",function(){
     userVal = roundOff(userVal);
     if( cval === userVal) {
          updateResponse("That is Correct",true);
+         $("#ask").trigger("click");
     } else {
           updateResponse("Please Try Again",false);
     }
